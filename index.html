@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>칸국지 뽑기</title>
+    <style>
+        .skill-button {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f0f0f0;
+            cursor: pointer;
+        }
+        .selected {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>칸국지 뽑기</h1>
+    <div id="ranges">
+        <div class="range">
+            <label for="subject1">종목:</label>
+            <input type="text" id="subject1" name="subject1">
+            <label for="a1">최소값:</label>
+            <input type="number" id="a1" name="a1">
+            <label for="b1">최대값:</label>
+            <input type="number" id="b1" name="b1"><br><br>
+        </div>
+    </div>
+    <button onclick="addRange()">추가</button><br><br>
+    <button onclick="generateRandomNumbers()">출력</button>
+    <div id="result"></div>
+
+    <h2>특기 선택 1</h2>
+    <div id="skills1">
+        <label for="numSkills1">뽑을 개수:</label>
+        <input type="number" id="numSkills1" name="numSkills1"><br><br>
+        <button onclick="selectRandomSkills1()">랜덤 특기 뽑기</button>
+    </div>
+    <div id="skillButtons1"></div>
+    <div id="selectedSkills1"></div>
+
+    <h2>특기 선택 2</h2>
+    <div id="skills2">
+        <label for="numSkills2">뽑을 개수:</label>
+        <input type="number" id="numSkills2" name="numSkills2"><br><br>
+        <button onclick="selectRandomSkills2()">랜덤 특기 뽑기</button>
+    </div>
+    <div id="skillButtons2"></div>
+    <div id="selectedSkills2"></div>
+
+    <h2>전법 뽑기</h2>
+    <div id="tactics">
+        <label for="numTactics">전법 개수:</label>
+        <input type="number" id="numTactics" name="numTactics"><br><br>
+        <label for="selectTactics">뽑을 전법 수:</label>
+        <input type="number" id="selectTactics" name="selectTactics"><br><br>
+        <button onclick="selectRandomTactics()">랜덤 전법 뽑기</button>
+    </div>
+    <div id="selectedTactics"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
